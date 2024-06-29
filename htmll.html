@@ -1,0 +1,129 @@
+<html lang="en"><head>
+
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22256%22 height=%22256%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%232a49da%22></rect><path d=%22M76.33 50.09L76.33 50.09Q76.33 57.11 74.34 62.47Q72.37 67.82 68.86 71.38Q65.34 74.93 60.58 76.78Q55.81 78.62 50.23 78.62L50.23 78.62Q40.33 78.62 33.40 72.95L33.40 72.95L27.91 78.89Q25.57 78.44 24.62 77.31Q23.68 76.19 23.68 75.20L23.68 75.20Q23.68 74.03 24.26 73.17Q24.85 72.32 26.02 71.15L26.02 71.15L28.99 68.09Q26.65 64.67 25.39 60.13Q24.13 55.58 24.13 50.09L24.13 50.09Q24.13 43.07 26.15 37.76Q28.18 32.45 31.69 28.85Q35.20 25.25 39.97 23.41Q44.73 21.56 50.23 21.56L50.23 21.56Q54.81 21.56 58.91 22.91Q63.00 24.26 66.34 26.87L66.34 26.87L71.56 21.11Q73.36 21.56 74.57 22.46Q75.78 23.36 75.78 24.62L75.78 24.62Q75.78 25.43 75.29 26.33Q74.80 27.23 73.53 28.76L73.53 28.76L70.92 31.64Q73.45 35.15 74.89 39.79Q76.33 44.42 76.33 50.09ZM68.95 50.09L68.95 50.09Q68.95 46.13 68.18 42.85Q67.42 39.56 65.98 36.95L65.98 36.95L38.08 67.91Q40.42 70.07 43.48 71.24Q46.54 72.41 50.23 72.41L50.23 72.41Q58.78 72.41 63.86 66.65Q68.95 60.89 68.95 50.09ZM31.60 50.09L31.60 50.09Q31.60 57.47 34.21 62.69L34.21 62.69L61.84 31.82Q57.06 27.77 50.23 27.77L50.23 27.77Q46.00 27.77 42.58 29.26Q39.16 30.74 36.73 33.58Q34.30 36.41 32.95 40.55Q31.60 44.69 31.60 50.09Z%22 fill=%22%23ffff00%22></path></svg>">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="“Pragma”" content="”no-cache”">
+    <meta http-equiv="“Expires”" content="”-1″">
+    <meta http-equiv="“CACHE-CONTROL”" content="”NO-CACHE”">
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/csss.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Ubuntu" rel="stylesheet">
+    
+    <title>Weather Forecast</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+    
+    <body>
+    
+    <img class="hero" src="images/banner.jpg" alt="banner">
+    <section>
+    <h1 class="section-heading">European Weather</h1>
+    <h2 class="section-subheading">European Weather Forecast</h2>
+    <p><code class="copyright-text">Powered by 
+        <a href="http://www.7timer.info/doc.php?lang=en" 
+        target="_blank" 
+        data-toggle="tooltip" 
+        data-placement="Top" 
+        title="" onclick="javascript:toolTipReset()" 
+        data-original-title="Tap to visit 7Timer!">
+        <span class="keyword-magnet">7Timer!</span>
+    </a>
+    </code></p>
+    
+    <div class="section-description">
+    
+      <p class="section-subheading"></p>
+      
+      <form id="query-form">
+            <select name="citySelected" id="citySelected" data-toggle="tooltip" 
+            onclick="javascript:toolTipReset()" 
+            data-placement="bottom" 
+            title="" data-original-title="Drop down and select a city to see the forecast">
+
+            <option disabled="" selected="" value=""> -- select a city -- </option>
+            <option value="{&quot;lat&quot;:&quot;52.367&quot;,&quot;lon&quot;:&quot;4.904&quot;}">Amsterdam, Netherlands</option>
+            <option value="{&quot;lat&quot;:&quot;39.933&quot;,&quot;lon&quot;:&quot;32.859&quot;}">Ankara, Turkey</option>
+            <option value="{&quot;lat&quot;:&quot;56.134&quot;,&quot;lon&quot;:&quot;12.945&quot;}">Åstorp, Sweden</option>
+            <option value="{&quot;lat&quot;:&quot;37.983&quot;,&quot;lon&quot;:&quot;23.727&quot;}">Athens, Greece</option>
+            <option value="{&quot;lat&quot;:&quot;54.597&quot;,&quot;lon&quot;:&quot;-5.930&quot;}">Belfast, Northern Ireland, UK</option>
+            <option value="{&quot;lat&quot;:&quot;41.387&quot;,&quot;lon&quot;:&quot;2.168&quot;}">Barcelona, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;52.520&quot;,&quot;lon&quot;:&quot;13.405&quot;}">Berlin, Germany</option>
+            <option value="{&quot;lat&quot;:&quot;46.948&quot;,&quot;lon&quot;:&quot;7.447&quot;}">Bern, Switzerland</option>
+            <option value="{&quot;lat&quot;:&quot;43.263&quot;,&quot;lon&quot;:&quot;-2.935&quot;}">Bilbao, Basque Country, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;50.847&quot;,&quot;lon&quot;:&quot;4.357&quot;}">Brussels, Belgium</option>
+            <option value="{&quot;lat&quot;:&quot;47.497&quot;,&quot;lon&quot;:&quot;19.040&quot;}">Bucharest, Romania</option>
+            <option value="{&quot;lat&quot;:&quot;59.329&quot;,&quot;lon&quot;:&quot;18.068&quot;}">Budapest, Hungary</option>
+            <option value="{&quot;lat&quot;:&quot;51.483&quot;,&quot;lon&quot;:&quot;-3.168&quot;}">Cardiff, Wales, UK</option>
+            <option value="{&quot;lat&quot;:&quot;50.937&quot;,&quot;lon&quot;:&quot;6.96&quot;}">Cologne, Germany</option>
+            <option value="{&quot;lat&quot;:&quot;55.676&quot;,&quot;lon&quot;:&quot;12.568&quot;}">Copenhagen, Denmark</option>
+            <option value="{&quot;lat&quot;:&quot;51.898&quot;,&quot;lon&quot;:&quot;-8.475&quot;}">Cork, Ireland</option>
+            <option value="{&quot;lat&quot;:&quot;53.349&quot;,&quot;lon&quot;:&quot;-6.260&quot;}">Dublin, Ireland</option>
+            <option value="{&quot;lat&quot;:&quot;55.953&quot;,&quot;lon&quot;:&quot;-3.188&quot;}">Edinburgh, Scotland, UK</option>
+            <option value="{&quot;lat&quot;:&quot;43.7696&quot;,&quot;lon&quot;:&quot;11.255&quot;}">Florence, Italy</option>
+            <option value="{&quot;lat&quot;:&quot;50.110&quot;,&quot;lon&quot;:&quot;8.682&quot;}">Frankfurt, Germany</option>        
+            <option value="{&quot;lat&quot;:&quot;43.254&quot;,&quot;lon&quot;:&quot;6.637&quot;}">French Riviera, France</option>
+            <option value="{&quot;lat&quot;:&quot;32.650&quot;,&quot;lon&quot;:&quot;-16.908&quot;}">Funchal, Madeira, Portugual</option>
+            <option value="{&quot;lat&quot;:&quot;36.140&quot;,&quot;lon&quot;:&quot;-5.353&quot;}">Gibraltar, British Territory</option>   
+            <option value="{&quot;lat&quot;:&quot;57.708&quot;,&quot;lon&quot;:&quot;11.974&quot;}">Gothenburg, Sweden</option>     
+            <option value="{&quot;lat&quot;:&quot;53.548&quot;,&quot;lon&quot;:&quot;9.987&quot;}">Hamburg, Germany</option>
+            <option value="{&quot;lat&quot;:&quot;60.169&quot;,&quot;lon&quot;:&quot;24.938&quot;}">Helsinki, Finland</option>
+            <option value="{&quot;lat&quot;:&quot;39.020&quot;,&quot;lon&quot;:&quot;1.482&quot;}">Ibiza, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;50.450&quot;,&quot;lon&quot;:&quot;30.523&quot;}">Kyiv, Ukraine</option>
+            <option value="{&quot;lat&quot;:&quot;61.115&quot;,&quot;lon&quot;:&quot;10.466&quot;}">Lillehammer, Norway</option>
+            <option value="{&quot;lat&quot;:&quot;38.722&quot;,&quot;lon&quot;:&quot;-9.139&quot;}">Lisbon, Portugual</option>
+            <option value="{&quot;lat&quot;:&quot;51.507&quot;,&quot;lon&quot;:&quot;-0.127&quot;}">London, England, UK</option>        
+            <option value="{&quot;lat&quot;:&quot;40.416&quot;,&quot;lon&quot;:&quot;-3.703&quot;}">Madrid, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;39.695&quot;,&quot;lon&quot;:&quot;3.017&quot;}">Mallorca, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;53.480&quot;,&quot;lon&quot;:&quot;-2.242&quot;}">Manchester, England, UK</option>        
+            <option value="{&quot;lat&quot;:&quot;43.296&quot;,&quot;lon&quot;:&quot;5.369&quot;}">Marseille, France</option>
+            <option value="{&quot;lat&quot;:&quot;27.760&quot;,&quot;lon&quot;:&quot;-15.586&quot;}">Maspalomas, Gran Canaria, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;45.464&quot;,&quot;lon&quot;:&quot;9.190&quot;}">Milan, Italy</option>
+            <option value="{&quot;lat&quot;:&quot;48.135&quot;,&quot;lon&quot;:&quot;11.582&quot;}">Munich, Germany</option>
+            <option value="{&quot;lat&quot;:&quot;40.851&quot;,&quot;lon&quot;:&quot;14.268&quot;}">Naples, Italy</option>
+            <option value="{&quot;lat&quot;:&quot;43.034&quot;,&quot;lon&quot;:&quot;-2.417&quot;}">Oñati, Basque Country, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;59.913&quot;,&quot;lon&quot;:&quot;10.752&quot;}">Oslo, Norway</option>
+            <option value="{&quot;lat&quot;:&quot;48.856&quot;,&quot;lon&quot;:&quot;2.352&quot;}">Paris, France</option>
+            <option value="{&quot;lat&quot;:&quot;50.075&quot;,&quot;lon&quot;:&quot;14.437&quot;}">Prague, Czech Republic</option>
+            <option value="{&quot;lat&quot;:&quot;64.146&quot;,&quot;lon&quot;:&quot;-21.942&quot;}">Reykjavík, Iceland</option>
+            <option value="{&quot;lat&quot;:&quot;56.879&quot;,&quot;lon&quot;:&quot;24.603&quot;}">Riga, Latvia</option>
+            <option value="{&quot;lat&quot;:&quot;41.902&quot;,&quot;lon&quot;:&quot;12.496&quot;}">Rome, Italy</option>
+            <option value="{&quot;lat&quot;:&quot;39.453&quot;,&quot;lon&quot;:&quot;-31.127&quot;}">Santa Cruz das Flores, Azores, Portugual</option>
+            <option value="{&quot;lat&quot;:&quot;28.463&quot;,&quot;lon&quot;:&quot;-16.251&quot;}">Santa Cruz de Tenerife, Tenerife, Spain</option>
+            <option value="{&quot;lat&quot;:&quot;57.273&quot;,&quot;lon&quot;:&quot;-6.215&quot;}">Skye, Scotland, UK</option>
+            <option value="{&quot;lat&quot;:&quot;42.697&quot;,&quot;lon&quot;:&quot;23.321&quot;}">Sofia, Bulgaria</option>
+            <option value="{&quot;lat&quot;:&quot;59.329&quot;,&quot;lon&quot;:&quot;18.068&quot;}">Stockholm, Sweden</option>
+            <option value="{&quot;lat&quot;:&quot;59.437&quot;,&quot;lon&quot;:&quot;24.753&quot;}">Tallinn, Estonia</option>
+            <option value="{&quot;lat&quot;:&quot;18.208&quot;,&quot;lon&quot;:&quot;16.373&quot;}">Vienna, Austria</option>
+            <option value="{&quot;lat&quot;:&quot;52.229&quot;,&quot;lon&quot;:&quot;21.012&quot;}">Warsaw, Poland</option>
+            <option value="{&quot;lat&quot;:&quot;53.961&quot;,&quot;lon&quot;:&quot;-1.07&quot;}">York, England, UK</option>
+            <option value="{&quot;lat&quot;:&quot;47.376&quot;,&quot;lon&quot;:&quot;8.541&quot;}">Zurich, Switzerland</option>
+            </select>
+    
+        </form>
+      <p></p>
+    
+    <div class="section-subheading" id="get-results-heading"></div>
+    <div class="results-div" id="results"></div>
+    
+    
+</section>
+    <footer>
+      <div class="section-divider"><img src="images/cloudline.png"></div>
+      <code class="copyright-text">© Copyright 2023 Eden H. Gebremedhin</code>
+    </footer>
+    
+    <!-- JQuery Scripts -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <!-- Bootstrap Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <!-- Our codes -->
+    <script src="js/main.js"></script>
+
+     </body>
+</html>
